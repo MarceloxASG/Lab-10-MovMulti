@@ -10,7 +10,12 @@ class ProductDetails {
   final String price;
   final String description;
 
-  ProductDetails({required this.name, required this.image, required this.price, required this.description});
+  ProductDetails({
+    required this.name,
+    required this.image,
+    required this.price,
+    required this.description,
+  });
 }
 
 class MyApp extends StatelessWidget {
@@ -34,7 +39,7 @@ class MyApp extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Center(
-                child: Image.network(
+                child: Image.asset(
                   product.image,
                   width: 300,
                   height: 300,
@@ -74,3 +79,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
